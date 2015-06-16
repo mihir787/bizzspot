@@ -15,31 +15,58 @@
 <div class="navbar-fixed">
   <nav class="white" role="navigation">
     <div class="nav-wrapper">
-      <a id="logo-container" href="#" class="brand-logo black-text">Logo</a>
+      <%= link_to image_tag("bizzspotlogo.png"), root_path, id: "logo-container", class: "brand-logo black-text" %>
       <ul class="right hide-on-med-and-down black-text">
+        <li>
+          <%= link_to "Search", search_path, id: "search-link", class: "black-text" %>
+        </li>
         <li>
           <% if current_user %>
             <a class="dropdown-button black-text" data-activates="signed-in">Signed in as <strong><%= current_user.name %></strong>!<i class="mdi-navigation-arrow-drop-down right"></i></a>
           <% else %>
             <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", class: "black-text" %>
           <% end %>
-          <!-- <% if current_user %>
-              Signed in as <strong><%= current_user.name %></strong>!
-          <% else %>
-            <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", class: "black-text" %>
-          <% end %> -->
         </li>
-        <!-- <li>
-          <% if current_user %>
-            <%= link_to "Sign out", signout_path, method: "delete", id: "sign_out", class: "black-text" %>
-          <% end %>
-        </li> -->
       </ul>
     </div>
   </nav>
 </div>
 
 <%= yield %>
+
+<footer class="page-footer blue-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Company Bio</h5>
+        <p class="grey-text text-lighten-4">I am a student at Turing School of Software and Design.</p>
+      </div>
+      <!-- <div class="col l3 s12">
+        <h5 class="white-text">Settings</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Link 1</a></li>
+          <li><a class="white-text" href="#!">Link 2</a></li>
+          <li><a class="white-text" href="#!">Link 3</a></li>
+          <li><a class="white-text" href="#!">Link 4</a></li>
+        </ul>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Connect</h5>
+        <ul>
+          <li><a class="white-text" href="#!">Link 1</a></li>
+          <li><a class="white-text" href="#!">Link 2</a></li>
+          <li><a class="white-text" href="#!">Link 3</a></li>
+          <li><a class="white-text" href="#!">Link 4</a></li>
+        </ul>
+      </div> -->
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      <a class="black-text" href="http://materializecss.com">Mihir Parikh | mihir787@gmail.com | github: mihir787</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
