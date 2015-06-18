@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  // var map;
-// var myLayer = L.mapbox.featureLayer().addTo(map);
   callService();
 
 })
@@ -14,7 +12,6 @@ function callService() {
     $('#map').toggleClass('hidden');
 
     var postParams = { address: $("#address").val() }
-      // $('#map').fadeOut();
 
     $.ajax({
       type: 'GET',
