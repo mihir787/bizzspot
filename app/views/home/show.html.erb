@@ -19,7 +19,15 @@
           <h5 class="header col s12 grey-text text-darken-3">Find the ideal location for your small business</h5>
         </div>
         <div class="row center">
-          <%= link_to "Search", search_path, id: "download-button", class: "btn-large waves-effect waves-light blue-grey" %>
+          <div class="input-field col s8 offset-s2 white black-text">
+
+          <%= form_tag("api/v1/coordinates/", method: "get") do %>
+            <%= label_tag(:address, "Property Listing Address:") %>
+            <%= text_field_tag(:address) %>
+            <%= submit_tag("Search", id: "search_button", class: "btn blue-grey") %>
+          <% end %>
+          </div>
+
         </div>
         <br><br>
 

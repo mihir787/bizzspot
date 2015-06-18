@@ -3,7 +3,17 @@ Rails.application.routes.draw do
   get 'auth/failure', to: redirect('/')
   delete 'signout', to: 'sessions#destroy'
 
-  get '/search', to: 'home#search'
-
   root to: "home#show"
+
+  post 'search', to: 'search#search'
+  get 'results/:id', to: 'search#show', as: :result
+
+  namespace :api do
+    namespace :v1 do
+      # get 'coordinates/:address', to: 'search#coordinates', address: /.*/
+      get 'coordinates', to: 'search#coordinates'
+
+    end
+  end
+
 end
