@@ -11,6 +11,10 @@ nav .brand-logo {
   color: #444;
 }
 
+.hidden {
+  display: none;
+}
+
 p {
   line-height: 2rem;
 }
@@ -52,4 +56,19 @@ p {
 
 footer.page-footer {
   margin: 0;
+}
+
+.bigmap {
+  position: absolute;
+  top: 300px;
+  bottom: 0px;
+  width: 100%;
+}
+
+.smallmap {
+  position: absolute;
+  top: 300px;
+  bottom: 0px;
+  width: 75%;
+  margin-left: 25%;
 }

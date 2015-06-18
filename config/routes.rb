@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root to: "home#show"
 
   post 'search', to: 'search#search'
-  get 'results/:id', to: 'search#show', as: :result
+  get 'results/', to: 'search#show', as: :result
 
   namespace :api do
     namespace :v1 do

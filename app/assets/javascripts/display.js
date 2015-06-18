@@ -1,14 +1,35 @@
-
 $(document).ready(function() {
-  L.mapbox.accessToken = $('#map-data').data('token');
-  var map = L.mapbox.map('map', 'mihir787.mfl5ppg2').setView([45.52086, -122.679523], 14)
-  $.ajax({
-    dataType: 'text',
-    url: 'coordinates/happening_now.json',
-    success: function(data) {
-      var geojson;
-      geojson = $.parseJSON(data);
-      return map.setGeoJSON(geojson);
-    }
-  });
-});
+  // var map;
+// var myLayer = L.mapbox.featureLayer().addTo(map);
+  callService();
+
+})
+
+function callService() {
+    L.mapbox.accessToken = 'pk.eyJ1IjoibWloaXI3ODciLCJhIjoiNDE2NDkzNzdlZTA2N2RjMmM4NWNkNjA1MjIwMGMxNDIifQ.3ggS6ol72ln878GzLZnfDQ';
+    var map = L.mapbox.map('map', 'mihir787.mfl5ppg2');
+    $('#map').addClass('smallmap');
+  $("#search_button").on('click', function(){
+    event.preventDefault();
+    $('#map').toggleClass('hidden');
+
+    var postParams = { address: $("#address").val() }
+      // $('#map').fadeOut();
+
+    $.ajax({
+      type: 'GET',
+      url: '/api/v1/coordinates',
+      data: postParams,
+      success: function(data) {
+        var coordinates = parseCoordinate(data.coordinates);
+        var start = [parseFloat(coordinates[1]), parseFloat(coordinates[0])];
+        map = map.setView(start, 14);
+      }
+    })
+  })
+}
+
+function parseCoordinate(stringCoordinates){
+  var coord = stringCoordinates;
+  return coord.replace("[","").replace("]","").replace(" ","").split(",");
+}
