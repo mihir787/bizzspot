@@ -1,20 +1,36 @@
+<!-- <body>
 <div class="row">
-  <form class="col s12">
     <%= form_tag("/results", method: "get", remote: true) do %>
-      <div class="row">
-        <div class="input-field col s6 offset-s2">
-          <%= label_tag(:address, "Property Listing Address") %>
-          <%= text_field_tag(:address) %>
-        </div>
+    <div class="row">
+      <div class="input-field col s6 offset-s2">
+        <%= label_tag(:address, "Property Listing Address") %>
+        <%= text_field_tag(:address) %>
       </div>
-      <div class="row">
-      <div class="col s2 offset-s4">
-      <%= submit_tag "Search", id: "search_button", class: "btn blue-grey" %>
-      </div>
-      </div>
-    <% end %>
-    <div class="bigmap hidden" id="map">
     </div>
-    </form>
-
+    <div class="row">
+      <div class="col s2 offset-s4">
+        <%= submit_tag "Search", id: "search_button", class: "btn blue-grey" %>
+      </div>
+    </div>
+      <% end %>
 </div>
+
+<div class="bigmap" id="map">
+</div>
+
+</body> -->
+<body>
+  <div class="row center">
+    <div class="input-field col s8 offset-s2 white black-text">
+
+      <%= form_tag("/results", method: "get", remote: true) do %>
+      <%= label_tag(:address, "Property Listing Address") %>
+      <%= text_field_tag(:address) %>
+      <%= submit_tag("Search", id: "search_button", class: "btn blue-grey") %>
+    <% end %>
+    </div>
+  </div>
+  <div class="bigmap smallmap" id="map">
+  </div>
+
+</body>

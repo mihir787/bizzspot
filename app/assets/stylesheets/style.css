@@ -5,6 +5,15 @@
  *
  * Made By MaterializeCSS.com
  */
+ body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+
+ main {
+   flex: 1 0 auto;
+ }
 
 nav ul a,
 nav .brand-logo {
@@ -56,6 +65,7 @@ p {
 
 footer.page-footer {
   margin: 0;
+  bottom:0;
 }
 
 .bigmap {
@@ -67,8 +77,9 @@ footer.page-footer {
 
 .smallmap {
   position: absolute;
-  top: 300px;
-  bottom: 0px;
-  width: 75%;
-  margin-left: 25%;
+  top: 200px;
+  bottom: 50px;
+  height: 70%;
+  width: 50%;
+  margin-left: 1%;
 }

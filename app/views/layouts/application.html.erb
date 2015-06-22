@@ -8,6 +8,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<main>
 <body>
   <!-- Dropdown Structure -->
   <ul id="signed-in" class="dropdown-content">
@@ -35,6 +36,7 @@
 </div>
 
 <%= yield %>
+</main>
 
 <footer class="page-footer blue-grey">
   <div class="container">

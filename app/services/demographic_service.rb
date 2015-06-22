@@ -2,11 +2,11 @@ class DemographicService
   attr_reader :connection
 
   def initialize
-    @connection = Hurley::Client.new('http://www.broadbandmap.gov/broadbandmap/')
+    @connection = Faraday.new('http://www.broadbandmap.gov/broadbandmap/')
   end
 
-  def demographics(coordinates)
-    located = parse(connection.get("demographic/2014/coordinates?latitude=#{}&longitude=#{}&format=json").body)
+  def generate_demographics(lat, long)
+    parse(connection.get("demographic/2014/coordinates?latitude=#{lat}&longitude=#{long}&format=json").body)[:Results]
   end
 
   private

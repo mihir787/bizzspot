@@ -52,6 +52,7 @@ end
 group :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'webmock'
   gem 'rspec-rails'
   gem 'launchy'
   gem 'database_cleaner'

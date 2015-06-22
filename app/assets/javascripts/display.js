@@ -1,15 +1,17 @@
 $(document).ready(function() {
-  callService();
+  L.mapbox.accessToken = 'pk.eyJ1IjoibWloaXI3ODciLCJhIjoiNDE2NDkzNzdlZTA2N2RjMmM4NWNkNjA1MjIwMGMxNDIifQ.3ggS6ol72ln878GzLZnfDQ';
+  var map = L.mapbox.map('map', 'mihir787.mfl5ppg2');
+
+  callService(map);
 
 })
 
-function callService() {
-    L.mapbox.accessToken = 'pk.eyJ1IjoibWloaXI3ODciLCJhIjoiNDE2NDkzNzdlZTA2N2RjMmM4NWNkNjA1MjIwMGMxNDIifQ.3ggS6ol72ln878GzLZnfDQ';
-    var map = L.mapbox.map('map', 'mihir787.mfl5ppg2');
-    $('#map').addClass('smallmap');
+function callService(map) {
+    // L.mapbox.accessToken = 'pk.eyJ1IjoibWloaXI3ODciLCJhIjoiNDE2NDkzNzdlZTA2N2RjMmM4NWNkNjA1MjIwMGMxNDIifQ.3ggS6ol72ln878GzLZnfDQ';
+    // var map = L.mapbox.map('map', 'mihir787.mfl5ppg2');
+    // $('#map').addClass('smallmap');
   $("#search_button").on('click', function(){
     event.preventDefault();
-    $('#map').toggleClass('hidden');
 
     var postParams = { address: $("#address").val() }
 
