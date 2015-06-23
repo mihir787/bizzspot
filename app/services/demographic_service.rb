@@ -6,12 +6,12 @@ class DemographicService
   end
 
   def generate_demographics(lat, long)
-    parse(connection.get("demographic/2014/coordinates?latitude=#{lat}&longitude=#{long}&format=json").body)[:Results]
+    data = parse(connection.get("demographic/2014/coordinates?latitude=#{lat}&longitude=#{long}&format=json").body)["Results"]
   end
 
   private
 
   def parse(response)
-    JSON.parse(response, symbolize_names: true)
+    JSON.parse(response)
   end
 end

@@ -12,25 +12,14 @@ class SearchController < ApplicationController
   #   @search = Search.find(params[:id])
   # end
 
+  def show
+
+  end
+
   def coordinates
   end
 
   def index
-
   end
 
 end
-
-# @result = {
-#   type: 'Feature',
-#   geometry: {
-#     type: 'Point',
-#     coordinates: loc[:coordinates]
-#   },
-#   properties: {
-#     address: loc[:address],
-#     'marker-color' => '#00607d',
-#     'marker-symbol' => 'circle',
-#     'marker-size' => 'medium'
-#   }
-# }

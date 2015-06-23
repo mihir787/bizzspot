@@ -11,16 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150617210428) do
+ActiveRecord::Schema.define(version: 20150623053611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "searches", force: :cascade do |t|
     t.string   "address"
-    t.string   "coordinates"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "demographic"
+    t.float    "lat"
+    t.float    "long"
+    t.integer  "walkscore"
+    t.float    "income_below_poverty"
+    t.float    "median_income"
+    t.float    "income_less_than_25"
+    t.float    "income_between_25_to_50"
+    t.float    "income_between_50_to_100"
+    t.float    "income_between_100_to_200"
+    t.float    "income_greater_200"
+    t.float    "education_high_school_graduate"
+    t.float    "education_bachelor_or_greater"
   end
 
   create_table "users", force: :cascade do |t|
