@@ -3,27 +3,37 @@ $(document).ready(function() {
   var map = L.mapbox.map('map', 'mihir787.mfl5ppg2', {attributionControl: false});
   $("#search_button").on('click', function(event){
     event.preventDefault();
-    var postParams = { address: $("#address").val() }
-    $.get("/api/v1/coordinates", postParams, function(data,status,xhr){
-      debugger;
-        $(".demographic-data").prepend(data["lat"])
-
-
-        map.setView([data["lat"], data["long"]], 14);
-        var marker = L.marker([data["lat"], data["long"]], {
-          icon: L.mapbox.marker.icon({
-            'marker-size': 'large',
-            "marker-symbol": "star",
-            'marker-color': '#FF0000'
-          })
-        }).addTo(map);
-        marker.bindPopup(formatContent(data)).closePopup();
-        generateChart(data);
-
-    });
+    var postParams = { address: $("#address").val() };
+    updateMap(postParams, map);
   });
 
 });
+
+function updateMap(postParams, map) {
+  $.ajax({
+    type: 'GET',
+    url: '/api/v1/coordinates',
+    data: postParams,
+    timeout: 12000,
+    error: function() {
+      $("#address").val("");
+      alert("invalid address, try again");
+    },
+    success: function(data) {
+      map.setView([data["lat"], data["long"]], 14);
+      var marker = L.marker([data["lat"], data["long"]], {
+        icon: L.mapbox.marker.icon({
+          'marker-size': 'large',
+          "marker-symbol": "star",
+          'marker-color': '#FF0000'
+        })
+      }).addTo(map);
+      marker.bindPopup(formatContent(data)).closePopup();
+      generateChart(data);
+    }
+  })
+};
+
 
 var formatContent = function(data) {
   var content = ("<p> <b>Walkscore:</b> " + data.walkscore + "</p><p><b>Latitude:</b> " +

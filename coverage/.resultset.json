@@ -253,11 +253,9 @@
         1,
         null,
         1,
-        1,
         null,
         1,
         1,
-        null,
         1,
         null,
         null,
@@ -430,6 +428,7 @@
       ],
       "/Users/mihir787/turing/module/bizzspot/app/controllers/home_controller.rb": [
         1,
+        null,
         1,
         null,
         null,
@@ -447,9 +446,9 @@
       ],
       "/Users/mihir787/turing/module/bizzspot/app/controllers/search_controller.rb": [
         1,
-        1,
         null,
         1,
+        null,
         null,
         null
       ],
@@ -515,6 +514,6 @@
         null
       ]
     },
-    "timestamp": 1435214493
+    "timestamp": 1435240269
   }
 }
