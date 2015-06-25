@@ -5,12 +5,10 @@ Rails.application.routes.draw do
 
   root to: "home#show"
 
-  post 'search', to: 'search#search'
   get 'results', to: 'search#show', as: :results
 
   namespace :api do
     namespace :v1 do
-      # get 'coordinates/:address', to: 'search#coordinates', address: /.*/
       get 'coordinates', to: 'search#coordinates'
 
     end

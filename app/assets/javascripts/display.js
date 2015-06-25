@@ -5,6 +5,7 @@ $(document).ready(function() {
     event.preventDefault();
     var postParams = { address: $("#address").val() }
     $.get("/api/v1/coordinates", postParams, function(data,status,xhr){
+      debugger;
         $(".demographic-data").prepend(data["lat"])
 
 
@@ -13,7 +14,7 @@ $(document).ready(function() {
           icon: L.mapbox.marker.icon({
             'marker-size': 'large',
             "marker-symbol": "star",
-            'marker-color': '#ffff00'
+            'marker-color': '#FF0000'
           })
         }).addTo(map);
         marker.bindPopup(formatContent(data)).closePopup();
