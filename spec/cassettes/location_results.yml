@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.tiles.mapbox.com/v4/geocode/mapbox.places/2221+66th+ave+se+mercer+island+wa.json?access_token=pk.eyJ1IjoibWloaXI3ODciLCJhIjoiNDE2NDkzNzdlZTA2N2RjMmM4NWNkNjA1MjIwMGMxNDIifQ.3ggS6ol72ln878GzLZnfDQ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Hurley v0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/vnd.geo+json; charset=utf-8
+      Content-Length:
+      - '901'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=3600
+      Date:
+      - Wed, 24 Jun 2015 19:51:38 GMT
+      Etag:
+      - '"02a6088b050a2750615cd1c41d5f09c2"'
+      Last-Modified:
+      - Wed, 24 Jun 2015 19:51:38 GMT
+      Server:
+      - nginx
+      X-Powered-By:
+      - Express
+      X-Rate-Limit-Interval:
+      - '60'
+      X-Rate-Limit-Limit:
+      - '600'
+      X-Rate-Limit-Remaining:
+      - '599'
+      X-Rate-Limit-Reset:
+      - '1435175557'
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 3c6cd3705576f791e49d58b73a16e8f0.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - azqZyJb3NgYX2N5br1QRXGvi8ukSEi9PEY1_NGMqNwCBfAnqvfIffw==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ0eXBlIjoiRmVhdHVyZUNvbGxlY3Rpb24iLCJxdWVyeSI6WyIyMjIxIiwi
+        NjZ0aCIsImF2ZSIsInNlIiwibWVyY2VyIiwiaXNsYW5kIiwid2EiXSwiZmVh
+        dHVyZXMiOlt7ImlkIjoiYWRkcmVzcy4xMDA1NzA1MTk2MjIyNTUiLCJ0eXBl
+        IjoiRmVhdHVyZSIsInRleHQiOiI2NnRoIEF2ZSBTRSIsInBsYWNlX25hbWUi
+        OiIyMjIxIDY2dGggQXZlIFNFLCBNZXJjZXIgSXNsYW5kLCA5ODA0MCwgV2Fz
+        aGluZ3RvbiwgVW5pdGVkIFN0YXRlcyIsInJlbGV2YW5jZSI6MC45OTksImNl
+        bnRlciI6Wy0xMjIuMjQ2NTEsNDcuNTkxMDk0XSwiZ2VvbWV0cnkiOnsidHlw
+        ZSI6IlBvaW50IiwiY29vcmRpbmF0ZXMiOlstMTIyLjI0NjUxLDQ3LjU5MTA5
+        NF19LCJiYm94IjpbLTEyMi4yNDc0MDQ5OTk5OTk5Nyw0Ny41ODc5Nzg5OTk5
+        OTk5OCwtMTIyLjI0NTc3OTk5OTk5OTk4LDQ3LjU5MTA5Mzk5OTk5OTk4NF0s
+        ImFkZHJlc3MiOiIyMjIxIiwicHJvcGVydGllcyI6e30sImNvbnRleHQiOlt7
+        ImlkIjoicGxhY2UuOTgwNDAiLCJ0ZXh0IjoiTWVyY2VyIElzbGFuZCJ9LHsi
+        aWQiOiJwb3N0Y29kZS4xNTM2MDk2MjczIiwidGV4dCI6Ijk4MDQwIn0seyJp
+        ZCI6InJlZ2lvbi40MjkzMTY5OTUiLCJ0ZXh0IjoiV2FzaGluZ3RvbiJ9LHsi
+        aWQiOiJjb3VudHJ5LjQxNTAxMDQ1MjUiLCJ0ZXh0IjoiVW5pdGVkIFN0YXRl
+        cyJ9XX1dLCJhdHRyaWJ1dGlvbiI6Ik5PVElDRTogWW91IG1heSBjYWNoZSB0
+        aGlzIGRhdGEgZm9yIHVwIHRvIDMwIGRheXMuIMKpIDIwMTUgTWFwYm94IGFu
+        ZCBpdHMgc3VwcGxpZXJzLiBBbGwgcmlnaHRzIHJlc2VydmVkLiBVc2Ugb2Yg
+        dGhpcyBkYXRhIGlzIHN1YmplY3QgdG8gdGhlIE1hcGJveCBUZXJtcyBvZiBT
+        ZXJ2aWNlLiAoaHR0cHM6Ly93d3cubWFwYm94LmNvbS9hYm91dC9tYXBzLyki
+        fQ==
+    http_version: 
+  recorded_at: Wed, 24 Jun 2015 19:51:38 GMT
+recorded_with: VCR 2.9.3

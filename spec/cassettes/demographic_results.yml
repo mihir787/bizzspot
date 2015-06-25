@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.broadbandmap.gov/broadbandmap/demographic/2014/coordinates?format=json&latitude=47.591094&longitude=-122.24651
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 24 Jun 2015 20:39:08 GMT
+      Server:
+      - 'NULL'
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Set-Cookie:
+      - BIGipServerbroadbandmap_7085=1120381120.44315.0000; path=/
+    body:
+      encoding: UTF-8
+      string: '{"status":"OK","responseTime":114,"message":[],"Results":{"blockFips":"530330243001035","incomeBelowPoverty":0.12200,"medianIncome":141364.00000,"incomeLessThan25":0.08787,"incomeBetween25to50":0.08577,"incomeBetween50to100":0.28034,"incomeBetween100to200":0.12343,"incomeGreater200":0.42260,"educationHighSchoolGraduate":0.98050,"educationBachelorOrGreater":0.62230}}'
+    http_version: 
+  recorded_at: Wed, 24 Jun 2015 20:39:12 GMT
+recorded_with: VCR 2.9.3

@@ -4,22 +4,25 @@
   <title>Bizzspot</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.css" rel="stylesheet" type="text/css">
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.css' rel='stylesheet' />
+  <%= javascript_include_tag 'https://api.tiles.mapbox.com/mapbox.js/v2.2.0/mapbox.js' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+
   <!-- Dropdown Structure -->
   <ul id="signed-in" class="dropdown-content">
-    <li><%= link_to "Signout", signout_path, method: "delete", id: "sign_out", class: "black-text" %> </li>
+    <li><%= link_to "Signout", signout_path, method: "delete", id: "sign_out", class: "black-text" %>
+    </li>
   </ul>
 
 <div class="navbar-fixed">
   <nav class="white" role="navigation">
     <div class="nav-wrapper">
-      <%= link_to image_tag("bizzspotlogo.png"), root_path, id: "logo-container", class: "brand-logo black-text" %>
+      <%= link_to image_tag("bizzspotlogo.png"), root_url, id: "logo-container", class: "brand-logo black-text" %>
       <ul class="right hide-on-med-and-down black-text">
-        <li>
-          <%= link_to "Search", search_path, id: "search-link", class: "black-text" %>
-        </li>
         <li>
           <% if current_user %>
             <a class="dropdown-button black-text" data-activates="signed-in">Signed in as <strong><%= current_user.name %></strong>!<i class="mdi-navigation-arrow-drop-down right"></i></a>
@@ -32,41 +35,26 @@
   </nav>
 </div>
 
+<body>
 <%= yield %>
 
-<footer class="page-footer blue-grey">
+</body>
+
+<!-- <footer class="page-footer blue-grey">
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
         <h5 class="white-text">Company Bio</h5>
         <p class="grey-text text-lighten-4">I am a student at Turing School of Software and Design.</p>
       </div>
-      <!-- <div class="col l3 s12">
-        <h5 class="white-text">Settings</h5>
-        <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
-          <li><a class="white-text" href="#!">Link 2</a></li>
-          <li><a class="white-text" href="#!">Link 3</a></li>
-          <li><a class="white-text" href="#!">Link 4</a></li>
-        </ul>
-      </div>
-      <div class="col l3 s12">
-        <h5 class="white-text">Connect</h5>
-        <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
-          <li><a class="white-text" href="#!">Link 2</a></li>
-          <li><a class="white-text" href="#!">Link 3</a></li>
-          <li><a class="white-text" href="#!">Link 4</a></li>
-        </ul>
-      </div> -->
     </div>
   </div>
   <div class="footer-copyright">
     <div class="container">
-      <a class="black-text" href="http://materializecss.com">Mihir Parikh | mihir787@gmail.com | github: mihir787</a>
+      <a class="black-text" href="http://materializecss.com">Mihir Parikh | mihir787@gmail.com | github: mihir787
+      </a>
     </div>
   </div>
-</footer>
+</footer> -->
 
-</body>
 </html>

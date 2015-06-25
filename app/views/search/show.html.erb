@@ -1,0 +1,14 @@
+  <div class="row">
+      <%= form_tag("/results", method: "get", remote: true) do %>
+    <div class="col s6">
+        <%= label_tag(:address, "Ex. 2221 66th ave se mercer island wa") %>
+        <%= text_field_tag(:address) %>
+    </div>
+    <div class="col s3">
+        <%= submit_tag("Search", id: "search_button", class: "btn blue-grey") %>
+    </div>
+      <% end %>
+  </div>
+
+<div id="map"></div>
+<div id="chart"></div>
