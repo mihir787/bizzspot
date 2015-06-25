@@ -1,6 +1,6 @@
 $(document).ready(function() {
   L.mapbox.accessToken = 'pk.eyJ1IjoibWloaXI3ODciLCJhIjoiNDE2NDkzNzdlZTA2N2RjMmM4NWNkNjA1MjIwMGMxNDIifQ.3ggS6ol72ln878GzLZnfDQ';
-  var map = L.mapbox.map('map', 'mihir787.mfl5ppg2');
+  var map = L.mapbox.map('map', 'mihir787.mfl5ppg2', {attributionControl: false});
   $("#search_button").on('click', function(event){
     event.preventDefault();
     var postParams = { address: $("#address").val() }
@@ -48,7 +48,7 @@ var generateChart = function(data) {
           type : 'donut'
       },
       donut: {
-          title: "Community Income Data",
+          title: "Community Income",
       }
   });
 };
