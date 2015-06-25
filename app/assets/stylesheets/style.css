@@ -83,3 +83,12 @@ footer.page-footer {
   margin: 0;
   bottom:0;
 }
+
+.parallax {
+  position: absolute;
+  background-image: url("bread_guy.jpg");
+}
+
+#search_button {
+  margin-top: 33%;
+}

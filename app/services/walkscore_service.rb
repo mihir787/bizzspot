@@ -6,7 +6,6 @@ class WalkscoreService
   end
 
   def score(address, lat, long)
-    address = address.gsub!("+", "%")
     parse(connection.get("/score?format=json&address=#{address}&lat=#{lat}&lon=#{long}&wsapikey=#{ENV['WALKSCORE_KEY']}").body)
   end
 

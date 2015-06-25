@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.walkscore.com/score?address=2221%2066th%20ave%20se%20mercer%20island%20wa&format=json&lat=47.591094&lon=-122.24651&wsapikey=68b3b20da84d95cbaa5adb8d02fa694b
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Expires:
+      - Thu, 25 Jun 2015 20:24:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept-Encoding
+      Date:
+      - Wed, 24 Jun 2015 20:24:55 GMT
+      Server:
+      - Google Frontend
+      Alternate-Protocol:
+      - 80:quic,p=0
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: "{\n\"status\": 1  \n, \"walkscore\": 29\n, \"description\": \"Car-Dependent\"\n,
+        \"updated\": \"2015-03-26 08:09:07.247870\" \n, \"logo_url\": \"https://cdn.walk.sc/images/api-logo.png\"\n,
+        \"more_info_icon\": \"https://cdn.walk.sc/images/api-more-info.gif\"\n, \"more_info_link\":
+        \"https://www.redfin.com/how-walk-score-works\"\n, \"ws_link\": \"https://www.walkscore.com/score/2221-66th-ave-se-mercer-island-wa/lat=47.591094/lng=-122.24651/?utm_source=bizzspot.herokuapp.com&utm_medium=ws_api&utm_campaign=ws_api\"\n,
+        \"help_link\": \"https://www.redfin.com/how-walk-score-works\"\n, \"snapped_lat\":
+        47.5905\n, \"snapped_lon\": -122.2470 \n\n\n\n}"
+    http_version: 
+  recorded_at: Wed, 24 Jun 2015 20:24:55 GMT
+recorded_with: VCR 2.9.3

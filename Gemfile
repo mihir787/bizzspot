@@ -43,6 +43,7 @@ gem 'rails_12factor'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'capybara'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
@@ -57,5 +58,8 @@ group :test do
   gem 'rspec-rails'
   gem 'launchy'
   gem 'database_cleaner'
+  gem 'vcr'
+  gem 'simplecov'
+  gem 'rspec-mocks'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 end

@@ -1,16 +1,14 @@
-
-  <div class="row center">
+  <div class="row">
       <%= form_tag("/results", method: "get", remote: true) do %>
-        <div class="input-field s12 white black-text">
-        <%= label_tag(:address, "Property Listing Address") %>
+    <div class="col s6">
+        <%= label_tag(:address, "Ex. 2221 66th ave se mercer island wa") %>
         <%= text_field_tag(:address) %>
-        <%= submit_tag("Search", id: "search_button", class: "btn blue-grey") %>
-      <% end %>
     </div>
+    <div class="col s3">
+        <%= submit_tag("Search", id: "search_button", class: "btn blue-grey") %>
+    </div>
+      <% end %>
   </div>
 
-
 <div id="map"></div>
-
-
 <div id="chart"></div>

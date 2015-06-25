@@ -16,17 +16,23 @@ $(document).ready(function() {
             'marker-color': '#ffff00'
           })
         }).addTo(map);
-        marker.bindPopup("<b> Walkscore: " + data.walkscore +
-        " | Latitude: " + data.lat + " | Longitude: " + data.long +
-        "| Median Income: $" + data.median_income + " | High School Graduate Rate: " +
-        generatePercentage(data.education_high_school_graduate) +
-        "% | Higher Education Graduate Rate: " + generatePercentage(data.education_bachelor_or_greater) +"% </b>").closePopup();
+        marker.bindPopup(formatContent(data)).closePopup();
         generateChart(data);
 
     });
   });
 
 });
+
+var formatContent = function(data) {
+  var content = ("<p> <b>Walkscore:</b> " + data.walkscore + "</p><p><b>Latitude:</b> " +
+  data.lat + "</p><p><b>Longitude:</b> " +
+  data.long + "</p><p><b>Median Income:</b> $" +
+  data.median_income + "</p><p><b>High School Grad Rate:</b> " +
+  generatePercentage(data.education_high_school_graduate) + "%</p><p><b>Higher Education Grad Rate:</b> " +
+  generatePercentage(data.education_bachelor_or_greater) + "%</p>");
+  return content;
+}
 
 var generateChart = function(data) {
   var chart = c3.generate({
