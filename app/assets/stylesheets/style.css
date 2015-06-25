@@ -86,7 +86,7 @@ footer.page-footer {
 
 .parallax {
   position: absolute;
-  background-image: url("bread_guy.jpg");
+  background-image: url("bread_guy.jpg" );
 }
 
 #search_button {
